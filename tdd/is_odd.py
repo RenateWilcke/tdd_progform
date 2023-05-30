@@ -29,3 +29,10 @@ def is_odd(x):
 assert is_odd.__doc__ is not None
 assert is_odd(1)
 assert is_odd(2)
+
+is_not_odd = False
+try:
+    is_odd('asd')
+except TypeError:
+    is_not_odd = True
+assert is_not_odd
