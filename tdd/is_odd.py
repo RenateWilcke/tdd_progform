@@ -21,18 +21,17 @@ def is_odd(x):
         Return False if x is even.
         Return TypeError if x is not a number.
     """
-    if not is_even(x):
-        return True
+    try:
+        a = is_even(x)
+    except TypeError:
+        return f"{x} is not a number."
     else:
-        return f"{x} is even"
+        if not a:
+            return True
+        else:
+            return f"{x} is even"
     
 assert is_odd.__doc__ is not None
 assert is_odd(1)
 assert is_odd(2)
-
-is_not_odd = False
-try:
-    is_odd('asd')
-except TypeError:
-    is_not_odd = True
-assert is_not_odd
+is_odd('asd')
