@@ -14,3 +14,9 @@ def is_even(x):
 assert is_even(2)
 assert is_even(3)
 
+is_not_even = False
+try:
+    is_even('asd')
+except TypeError:
+    is_not_even = True
+assert is_not_even
