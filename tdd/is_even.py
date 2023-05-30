@@ -20,3 +20,6 @@ try:
 except TypeError:
     is_not_even = True
 assert is_not_even
+
+assert is_even(4.4)
+
