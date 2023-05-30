@@ -8,7 +8,7 @@ def is_zero(x):
     """
     if not isinstance(x, int):
         raise TypeError("'x' must be an integer")
-    return True
+    return x == 0
 
 assert is_zero.__doc__ is not None
 
@@ -20,3 +20,4 @@ except:
 assert has_raised
 
 assert is_zero(0)
+assert not is_zero(1)
