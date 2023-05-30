@@ -8,5 +8,9 @@ def is_even(x):
     """
     if (x % 2) == 0:
         return True
+    else:
+        return f"{x} is odd"
 
 assert is_even(2)
+assert is_even(3)
+
